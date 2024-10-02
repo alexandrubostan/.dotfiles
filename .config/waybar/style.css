@@ -104,11 +104,6 @@ label:focus {
     margin-bottom: 0;
 }
 
-#idle_inhibitor.activated {
-    background-color: #ffffff;
-    color: #2d3436;
-}
-
 #language {
     background: #000000;
     color: #ffffff;

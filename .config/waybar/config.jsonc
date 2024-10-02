@@ -105,7 +105,9 @@
         "format-icons": {
             "activated": "",
             "deactivated": ""
-        }
+        },
+        "start-activated": true,
+        "timeout": 99999999
     },
     "tray": {
         "icon-size": 20,
