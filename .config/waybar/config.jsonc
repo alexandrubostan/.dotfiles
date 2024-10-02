@@ -5,7 +5,7 @@
     "output": "DP-1",
     //"height": 40, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 8, // Gaps between modules (4px)
+    //"spacing": 8,
     // Choose the order of the modules
     "modules-left": [
         "sway/workspaces",
@@ -13,9 +13,12 @@
     ],
     "modules-right": [
         "tray",
+        "custom/separator",
+        "sway/language",
+        "custom/separator",
         "pulseaudio",
+        "custom/separator",
         //"network",
-        //"sway/language",
         //"battery",
         "clock"
     ],
@@ -36,6 +39,14 @@
     //         "default": ""
     //     }
     // },
+    "sway/language": {
+        "tooltip": false
+    },
+    "custom/separator": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -51,7 +62,10 @@
     "sway/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
-        "format-icons": ["", ""],
+        "format-icons": [
+            "",
+            ""
+        ],
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
     },
@@ -96,7 +110,8 @@
         // "timezone": "America/New_York",
         "tooltip": false,
         //"locale": "ro_RO.UTF-8",
-        "format-alt": "{:%a %d.%m.%Y}"
+        "format-alt": "{:%a %d.%m.%Y}",
+        "interval": 1
     },
     "cpu": {
         "format": "{usage}% ",
@@ -111,12 +126,22 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": [
+            "",
+            "",
+            ""
+        ]
     },
     "backlight": {
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
-        "format-icons": ["🌑", "🌘", "🌗", "🌖", "🌕"]
+        "format-icons": [
+            "🌑",
+            "🌘",
+            "🌗",
+            "🌖",
+            "🌕"
+        ]
     },
     "battery": {
         "states": {
@@ -131,21 +156,27 @@
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
     },
     "battery#bat2": {
         "bat": "BAT2"
     },
     "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
@@ -158,19 +189,10 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon}",
-        "format-muted": "\uf6a9",
+        "format": "Vol: {volume}",
+        "format-muted": "Muted"
         //"format-source": "{volume}% ",
         //"format-source-muted": "",
-        "format-icons": {
-            //"headphone": "",
-            //"hands-free": "",
-            //"headset": "",
-            //"phone": "",
-            //"portable": "",
-            //"car": "",
-            "default": ["\uf026", "\uf027", "\uf028"]
-        }
         //"on-click": "pavucontrol"
     },
     "custom/media": {
@@ -186,15 +208,15 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
-        "format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
+        "format": "⏻ ",
+        "tooltip": false,
+        "menu": "on-click",
+        "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+        "menu-actions": {
+            "shutdown": "shutdown",
+            "reboot": "reboot",
+            "suspend": "systemctl suspend",
+            "hibernate": "systemctl hibernate"
+        }
     }
 }
