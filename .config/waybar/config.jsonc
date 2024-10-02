@@ -7,15 +7,16 @@
     "margin-bottom": 3,
     "margin-left": 3,
     "margin-right": 3,
-    //"height": 40, // Waybar height (to be removed for auto height)
+    "height": 35, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    //"spacing": 8,
+    "spacing": 8,
     // Choose the order of the modules
     "modules-left": [
-        "sway/workspaces",
-        "idle_inhibitor"
+        "sway/workspaces"
     ],
     "modules-right": [
+        "idle_inhibitor",
+        "custom/separator",
         "tray",
         "custom/separator",
         "sway/language",
