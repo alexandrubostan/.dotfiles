@@ -3,6 +3,10 @@
     // "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)
     "output": "DP-1",
+    "margin-top": 0,
+    "margin-bottom": 3,
+    "margin-left": 3,
+    "margin-right": 3,
     //"height": 40, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     //"spacing": 8,
@@ -190,10 +194,10 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "Vol: {volume}",
-        "format-muted": "Muted"
+        "format-muted": "Muted",
         //"format-source": "{volume}% ",
         //"format-source-muted": "",
-        //"on-click": "pavucontrol"
+        "on-click": "pavucontrol"
     },
     "custom/media": {
         "format": "{icon} {}",
