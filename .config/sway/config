@@ -170,7 +170,8 @@ focus_follows_mouse no
 # Layout stuff:
 #
     workspace_layout tabbed
-    bindsym alt+tab focus prev
+    bindsym $mod+tab focus prev
+    bindsym $mod+shift+tab workspace back_and_forth
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
